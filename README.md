@@ -1,6 +1,6 @@
 #  Bootcamp Back-End Developer
 
->  bootcamp STMIK Mardira Indonesia kelas back-end developer setiap pertemuan
+>  Bootcamp STMIK Mardira Indonesia kelas back-end developer
 
 ## List Materi Bootcamp Setiap Pertemuan
 
