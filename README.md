@@ -1,6 +1,6 @@
 #  Bootcamp Back-End Developer
 
->  Bootcamp STMIK Mardira Indonesia kelas back-end developer
+Bootcamp STMIK Mardira Indonesia kelas back-end developer
 
 ## List Materi Bootcamp Setiap Pertemuan
 
@@ -13,4 +13,19 @@
 * [Materi 7](https://github.com/Bootcamp-STMIK-Mardira-Indonesia/backend-development/tree/master/materi-7) :pushpin: Object Oriented Programming (OOP)
 * [Materi 8](https://github.com/Bootcamp-STMIK-Mardira-Indonesia/backend-development/blob/master/materi-8/Day%208%20-%20Back-End%20Development.pdf) :pushpin: PDO (PHP Data Object), CRUD (Create Read Update Delete), & Simple API
 * [Materi 9](https://github.com/Bootcamp-STMIK-Mardira-Indonesia/backend-development/blob/master/materi-9/Day%209%20-%20Back-End%20Development.pdf) :pushpin: REST (Representational State Transfer) API 
+
+## Teknologi Yang Digunakan (Minimum Requirement)
+Kumpulan teknologi yang digunakan untuk mengikuti kelas back-end development
+### Bahasa Pemrograman
+#### PHP
+Versi PHP yang digunakan mulai dari versi `7.4` sampai `8.1`
+### Text Editor 
+* Visual Studio Code (https://code.visualstudio.com/)
+* Sublime Text (https://www.sublimetext.com/
+### Universal Development Environment
+* Xampp (https://www.apachefriends.org/download.html)
+* Laragon (https://laragon.org/)
+### API tool
+* Postman (https://www.postman.com/downloads/)
+
 
