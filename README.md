@@ -25,7 +25,7 @@ Versi PHP yang digunakan mulai dari versi `7.4` sampai `8.1`
 ### Universal Development Environment
 * Xampp (https://www.apachefriends.org/download.html)
 * Laragon (https://laragon.org/)
-### API tool
+### API Tool
 * Postman (https://www.postman.com/downloads/)
 
 
