@@ -34,6 +34,20 @@ class Model
         return $statement->fetch(PDO::FETCH_OBJ);
     }
 
+    public function findWhere(array $data)
+    {
+        $query = "SELECT * FROM {$this->table} WHERE ";
+        $query .= implode(' AND ', array_map(function ($key) {
+            return $key . ' = :' . $key;
+        }, array_keys($data)));
+        $statement = $this->statement->prepare($query);
+        foreach ($data as $key => $value) {
+            $statement->bindValue(':' . $key, $value);
+        }
+        $statement->execute();
+        return $statement->fetch(PDO::FETCH_OBJ);
+    }
+
     public function row(): int
     {
         $query = "SELECT * FROM {$this->table}";
