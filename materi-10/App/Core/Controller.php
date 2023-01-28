@@ -9,11 +9,13 @@ header('Access-Control-Allow-Headers: X-Requested-With');
 
 use App\Core\Input;
 use App\Core\DotEnvKey;
+use App\Core\HasTokens;
 
 class Controller
 {
-    protected $input;
-    protected $env;
+    use HasTokens;
+    protected object $input;
+    protected object $env;
 
     public function __construct()
     {
@@ -21,6 +23,13 @@ class Controller
         $this->env = new DotEnvKey();
     }
 
+    /**
+     * Response method to send response to the client
+     *
+     * @param  mixed $status_code
+     * @param  mixed $response
+     * @return void
+     */
     public function response(int $status_code, $response): void
     {
         http_response_code($status_code);
@@ -29,6 +38,12 @@ class Controller
         exit;
     }
 
+    /**
+     * Model method to load the model
+     *
+     * @param  mixed $model
+     * @return object
+     */
     public function model(string $model): object
     {
         if (is_array($model)) {
