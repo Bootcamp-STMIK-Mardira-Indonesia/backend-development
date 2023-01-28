@@ -30,12 +30,10 @@ trait HasTokens
      */
     public function verifyToken(string $token, string $key) : object
     {
-        $token = explode(' ', $token)[1];
-        $decoded = $this->verifyToken($token, $key);
-        if (is_string($decoded)) {
-            return $decoded;
+        if (strpos($token, 'Bearer') !== false) {
+            $token = explode(' ', $token)[1];
         }
-
+        $decoded = $this->decodeToken($token, $key);
         return $decoded->data;
     }
 
