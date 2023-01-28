@@ -8,14 +8,17 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 header('Access-Control-Allow-Headers: X-Requested-With');
 
 use App\Core\Input;
+use App\Core\DotEnvKey;
 
 class Controller
 {
     protected $input;
+    protected $env;
 
     public function __construct()
     {
         $this->input = new Input();
+        $this->env = new DotEnvKey();
     }
 
     public function response(int $status_code, $response): void
