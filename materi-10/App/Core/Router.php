@@ -44,6 +44,8 @@ class Router
                     $controller->$function(...array_slice($matches, 1));
                     return;
                 }
+            } else {
+                self::response(405, ['message' => 'Method not allowed']);
             }
         }
         self::response(404, ['message' => 'Not found']);
