@@ -29,7 +29,6 @@ class Router
     {
         $requestMethod = $_SERVER['REQUEST_METHOD'];
         $requestUri = $_SERVER['REQUEST_URI'];
-
         foreach (self::$routes as $route) {
             if ($route['method'] === $requestMethod) {
                 $path = $route['path'];
@@ -44,8 +43,6 @@ class Router
                     $controller->$function(...array_slice($matches, 1));
                     return;
                 }
-            } else {
-                self::response(405, ['message' => 'Method not allowed']);
             }
         }
         self::response(404, ['message' => 'Not found']);
