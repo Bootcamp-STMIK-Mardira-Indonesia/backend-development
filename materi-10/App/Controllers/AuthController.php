@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 use App\Helpers\TimeHelper;
+use App\Core\Validator;
 
 class AuthController extends Controller
 {
@@ -11,6 +12,26 @@ class AuthController extends Controller
     {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
+
+        $validator = Validator::validate([
+            'username' => [
+                'required' => true,
+
+            ],
+            'password' => [
+                'required' => true,
+            ]
+        ], [
+            'username' => $username,
+            'password' => $password
+        ]);
+
+        if ($validator->fails()) {
+            $this->response(400, [
+                'message' => 'Login failed',
+                'errors' => $validator->errors()
+            ]);
+        }
 
         $user = $this->model('Users')->findWhere([
             'username' => $username,
