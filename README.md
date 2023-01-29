@@ -13,6 +13,7 @@ Bootcamp STMIK Mardira Indonesia kelas back-end developer
 * [Materi 7](https://github.com/Bootcamp-STMIK-Mardira-Indonesia/backend-development/tree/master/materi-7) :pushpin: Object Oriented Programming (OOP)
 * [Materi 8](https://github.com/Bootcamp-STMIK-Mardira-Indonesia/backend-development/blob/master/materi-8/Day%208%20-%20Back-End%20Development.pdf) :pushpin: PDO (PHP Data Object), CRUD (Create Read Update Delete), & Simple API
 * [Materi 9](https://github.com/Bootcamp-STMIK-Mardira-Indonesia/backend-development/blob/master/materi-9/Day%209%20-%20Back-End%20Development.pdf) :pushpin: REST (Representational State Transfer) API 
+* [Materi 10](https://github.com/Bootcamp-STMIK-Mardira-Indonesia/backend-development/blob/master/materi-10/Day%2010%20-%20Back-End%20Development%20-%20Remastered.pdf) :pushpin: JWT (JavaScript Web Token) Authentication & Framework Model Controller Pattern
 
 ## Teknologi Yang Digunakan (Minimum Requirement)
 Kumpulan teknologi yang digunakan untuk mengikuti kelas back-end development
