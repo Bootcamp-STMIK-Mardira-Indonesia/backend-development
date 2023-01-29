@@ -2,8 +2,11 @@
 
 namespace App\Core;
 
+use App\Core\Responses;
+
 class Router
 {
+    use Responses;
     private static $routes = [];
 
     public static function add(
@@ -32,6 +35,7 @@ class Router
                 $path = $route['path'];
                 $path = str_replace('/', '\/', $path);
                 $path = preg_replace('/\{[a-zA-Z0-9]+\}/', '([a-zA-Z0-9]+)', $path);
+
                 $path = '/^' . $path . '$/';
                 if (preg_match($path, $requestUri, $matches)) {
                     $controller = $route['controller'];
@@ -42,12 +46,6 @@ class Router
                 }
             }
         }
-        http_response_code(404);
-        $response = [
-            'status' => 'error',
-            'message' => 'Not Found'
-        ];
-        header('Content-Type: application/json');
-        echo json_encode($response);
+        self::response(404, ['message' => 'Not found']);
     }
 }
