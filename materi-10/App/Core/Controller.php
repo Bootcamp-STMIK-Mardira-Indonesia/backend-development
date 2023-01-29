@@ -10,10 +10,13 @@ header('Access-Control-Allow-Headers: X-Requested-With');
 use App\Core\Input;
 use App\Core\DotEnvKey;
 use App\Core\HasTokens;
+use App\Core\Responses;
+
 
 class Controller
 {
     use HasTokens;
+    use Responses;
     protected object $input;
     protected object $env;
 
@@ -21,21 +24,6 @@ class Controller
     {
         $this->input = new Input();
         $this->env = new DotEnvKey();
-    }
-
-    /**
-     * Response method to send response to the client
-     *
-     * @param  mixed $status_code
-     * @param  mixed $response
-     * @return void
-     */
-    public function response(int $status_code, $response): void
-    {
-        http_response_code($status_code);
-        header('Content-Type: application/json');
-        echo json_encode($response);
-        exit;
     }
 
     /**
