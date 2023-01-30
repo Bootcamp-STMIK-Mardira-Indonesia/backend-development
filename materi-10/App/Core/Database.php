@@ -29,6 +29,11 @@ class Database
         }
         return $this->connection;
     }
+
+    public static function getConnection(): object
+    {
+        return (new self)->connection;
+    }
 }
 
 $database = new Database();
